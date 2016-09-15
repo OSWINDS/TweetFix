@@ -2243,9 +2243,14 @@ label {
 .intro{
     padding-top: 20px;
     font-size: 18px;
+    text-align: justify;
 }
 
 .intro-title{
     font-size: 32px;
     font-weight: bold;
+}
+
+.date{
+
 }
