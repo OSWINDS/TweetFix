@@ -13,7 +13,8 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
+	  <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
@@ -48,7 +49,7 @@
             </div>
         </header>
       <!--header end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -98,7 +99,7 @@
           </div>
       </aside>
       <!--sidebar end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -106,64 +107,88 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-              <h3><i class="fa fa-angle-right"></i> The Djokovic Case</h3>
+              <h2><i class="fa fa-angle-right"></i> The Djokovic Case</h2>
               <div class="row mt">
-                  <div class="col-lg-1"></div>
-                  <div class="col-lg-10">
-                      <p class="intro">
+                  <div class="col-lg-9 col-md-9 col-sm-9">
+                    <!-- INTRO TO THE CASE -->
+                    <div class="row">
+                      <p class="intro intro-cases">
                           On January the 18th 2016, Djokovic revealed that some years ago he was approached indirectly with a £100,000 offer in order to lose a match.
                           The revealed scandal provoked a storm of reactions from the other tennis players, news agencies as well as the social media, where there was
                           an burst of users expressing their opinions regarding Djokovic, match fixing and other related topics.
 
                       </p>
+                    </div>
+                    <!-- TWEETS PER DAY PLOT -->
+                    <div class="row mt case-charts">
+                      <div class="content-panel">
+                          <h4><i class="fa fa-angle-right"></i> Tweets per Day</h4>
+                          <div class="panel-body">
+                              <div id="hero-graph" class="graph"></div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- TAG CLOUDS
+                    <div class="row mt case-charts">
+                      <div class="col-lg-6">
+                      </div>
+                    </div> -->
                   </div>
-                  <div class="col-lg-1"></div>
-              </div>
-
-              <div class="row">
-                  <div class="col-lg-12 main-chart">
-                      <div class="row mtbox">
-                          <div class="col-md-2 col-sm-2 col-md-offset-1 box0">
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                      <!-- GENERAL INFO -->
+                      <div class="row">
+                          <div class="col-md-2 col-sm-2"></div>
+                          <div class="col-md-3 col-sm-3 box0">
                               <div class="box1">
                                   <span class="fa fa-twitter"></span>
                                   <h3>105.188</h3>
                               </div>
-                              <p>17.344 distinct tweets</p>
+                              <p>105.188 distinct tweets</p>
                           </div>
-                          <div class="col-md-2 col-sm-2 box0">
+                          <div class="col-md-3 col-sm-3 box0">
                               <div class="box1">
                                   <span class="fa fa-youtube"></span>
                                   <h3>198</h3>
                               </div>
                               <p>198 distinct Youtube comments</p>
                           </div>
-                          <div class="col-md-2 col-sm-2 box0">
+                          <div class="col-md-3 col-sm-3 box0">
                               <div class="box1">
                                   <span class="fa fa-user"></span>
                                   <h3>1.901</h3>
                               </div>
                               <p>1.901 distinct users</p>
                           </div>
-                          <div class="col-md-2 col-sm-2 box0">
+                        </div>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-2"></div>
+                          <div class="col-md-3 col-sm-3 box0">
                               <div class="box1">
                                   <span class="fa fa-list"></span>
                                   <h3>2.639</h3>
                               </div>
                               <p>2.639 distinct words</p>
                           </div>
-                          <div class="col-md-2 col-sm-2 box0">
+                          <div class="col-md-6 col-sm-6 box0">
                               <div class="box1">
                                   <span class="fa fa-calendar-o"></span>
-                                  <h4>18/01/2016 to 30/04/2016</h4>
+                                  <h4 class="date-box">18/01/2016 to 30/04/2016</h4>
                               </div>
                               <p>The time frame of the data is 4 months</p>
                           </div>
                       </div>
+                      <!-- LOCATIONS -->
+                      <div class="row">
+                        <div class="mt"> <!-- class="content-panel" for the white background-->
+                          <!-- <h4><i class="fa fa-angle-right"></i> Locations</h4> -->
+                          <div class="panel-body text-center">
+                            <canvas id="doughnut" height="300" width="400"></canvas>
+                          </div>
+                        </div>
+                      </div>
                   </div>
-
               </div>
-
-          </section><! --/wrapper -->
+          </section><!--/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->
@@ -190,18 +215,23 @@
 
 
     <!--common script for all pages-->
+	  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	  <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    
-  <script>
+    <script src="assets/js/morris-conf.js"></script>
+    <script src="assets/js/chart-master/Chart.js"></script>
+    <script src="assets/js/chartjs-conf.js"></script>
+
+    <script>
       //custom select box
 
       $(function(){
           $('select.styled').customSelect();
       });
 
-  </script>
+    </script>
 
   </body>
 </html>
