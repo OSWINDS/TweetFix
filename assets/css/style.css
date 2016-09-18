@@ -858,7 +858,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 .box0 p {
 	text-align: center;
 	font-size: 12px;
-	color: #f2f2f2;
+	color: #fff; /*old-color: #f2f2f2;*/
 }
 
 .box0:hover p {
@@ -932,8 +932,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
-
-
 
 .custom-bar-chart .bar .value:hover {
     background: #2f2f2f;
@@ -2256,6 +2254,7 @@ label {
 }
 
 .intro-cases{
+    font-size: 20px;
     padding-top: 20px;
     padding-left: 60px;
 }
@@ -2265,5 +2264,17 @@ label {
 }
 
 .case-charts{
-    padding-left: 60px;
+    padding: 0 40px 0 60px;
+}
+
+img{
+  width: 100%;
+}
+
+.box-SA{
+  border-bottom: 0px;
+}
+
+.case-right{
+   margin: 0 20px;
 }

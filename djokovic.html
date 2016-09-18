@@ -121,72 +121,105 @@
                     </div>
                     <!-- TWEETS PER DAY PLOT -->
                     <div class="row mt case-charts">
-                      <div class="content-panel">
+                      <!-- <div class="content-panel"> -->
                           <h4><i class="fa fa-angle-right"></i> Tweets per Day</h4>
                           <div class="panel-body">
                               <div id="hero-graph" class="graph"></div>
                           </div>
-                      </div>
+                      <!-- </div> -->
                     </div>
-                    <!-- TAG CLOUDS
-                    <div class="row mt case-charts">
-                      <div class="col-lg-6">
-                      </div>
-                    </div> -->
                   </div>
                   <div class="col-lg-3 col-md-3 col-sm-3">
                       <!-- GENERAL INFO -->
-                      <div class="row">
-                          <div class="col-md-2 col-sm-2"></div>
-                          <div class="col-md-3 col-sm-3 box0">
-                              <div class="box1">
-                                  <span class="fa fa-twitter"></span>
-                                  <h3>105.188</h3>
+                      <div class="content-panel case-right">
+                        <h4><i class="fa fa-angle-right"></i> Infobox</h4>
+                        <div class="panel-body">
+                          <div class="row">
+                              <div class="col-md-4 col-sm-4 box0">
+                                  <div class="box1">
+                                      <span class="fa fa-twitter"></span>
+                                      <h3>105.188</h3>
+                                  </div>
+                                  <p>105.188 distinct tweets</p>
                               </div>
-                              <p>105.188 distinct tweets</p>
-                          </div>
-                          <div class="col-md-3 col-sm-3 box0">
-                              <div class="box1">
-                                  <span class="fa fa-youtube"></span>
-                                  <h3>198</h3>
+                              <div class="col-md-4 col-sm-4 box0">
+                                  <div class="box1">
+                                      <span class="fa fa-youtube"></span>
+                                      <h3>198</h3>
+                                  </div>
+                                  <p>198 distinct Youtube comments</p>
                               </div>
-                              <p>198 distinct Youtube comments</p>
-                          </div>
-                          <div class="col-md-3 col-sm-3 box0">
-                              <div class="box1">
-                                  <span class="fa fa-user"></span>
-                                  <h3>1.901</h3>
+                              <div class="col-md-4 col-sm-4 box0">
+                                  <div class="box1">
+                                      <span class="fa fa-user"></span>
+                                      <h3>1.901</h3>
+                                  </div>
+                                  <p>1.901 distinct users</p>
                               </div>
-                              <p>1.901 distinct users</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-2 col-sm-2"></div>
-                          <div class="col-md-3 col-sm-3 box0">
-                              <div class="box1">
-                                  <span class="fa fa-list"></span>
-                                  <h3>2.639</h3>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-4 box0">
+                                  <div class="box1">
+                                      <span class="fa fa-list"></span>
+                                      <h3>2.639</h3>
+                                  </div>
+                                  <p>2.639 distinct words</p>
                               </div>
-                              <p>2.639 distinct words</p>
-                          </div>
-                          <div class="col-md-6 col-sm-6 box0">
-                              <div class="box1">
-                                  <span class="fa fa-calendar-o"></span>
-                                  <h4 class="date-box">18/01/2016 to 30/04/2016</h4>
+                              <div class="col-md-8 col-sm-8 box0">
+                                  <div class="box1">
+                                      <span class="fa fa-calendar-o"></span>
+                                      <h4 class="date-box">18/01/2016 - 30/04/2016</h4>
+                                  </div>
+                                  <p>The time frame of the data is 4 months</p>
                               </div>
-                              <p>The time frame of the data is 4 months</p>
                           </div>
-                      </div>
-                      <!-- LOCATIONS -->
-                      <div class="row">
-                        <div class="mt"> <!-- class="content-panel" for the white background-->
-                          <!-- <h4><i class="fa fa-angle-right"></i> Locations</h4> -->
-                          <div class="panel-body text-center">
-                            <canvas id="doughnut" height="300" width="400"></canvas>
+                          <!-- SENTIMENT ANALYSIS SCORES -->
+                          <div class="row">
+                            <div class="col-md-12 col-sm-12 box0">
+                                <div class="box1 box-SA">
+                                    <h3>SA Score: <span style="font-size: 32px; color: #ff865c;">Neutral</span></h3>
+                                </div>
+                                <p>The overall score of our sentiment analysis was Neutral.</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                   </div>
+              </div>
+              <!-- TAG CLOUDS !!! draft photos -->
+              <div class="row mt">
+                <div class="case-charts">
+                  <!-- <div class="content-panel"> -->
+                    <h4><i class="fa fa-angle-right"></i> Most frequent words / hashtags / mentions</h4>
+                    <div class="panel-body">
+                      <div class="col-lg-4">
+                        <img src="images/words.png"></img>
+                      </div>
+                      <div class="col-lg-4">
+                        <img src="images/hashtags.png"></img>
+                      </div>
+                      <div class="col-lg-4">
+                        <img src="images/mentions.png"></img>
+                      </div>
+                    <!-- </div> -->
+                  </div>
+                </div>
+              </div>
+              <!-- USERS - MAP !!! draft photos -->
+              <div class="row mt">
+                <div class="case-charts">
+                  <!-- <div class="content-panel"> -->
+                    <h4><i class="fa fa-angle-right"></i> Most Frequent Users / Location Map</h4>
+                    <div class="panel-body">
+                      <div class="col-lg-4">
+                        <img src="images/users-freq.jpg"></img>
+                      </div>
+                      <div class="col-lg-8">
+                        <img src="images/map.png"></img>
+                      </div>
+                    </div>
+                  <!-- </div> -->
+                </div>
               </div>
           </section><!--/wrapper -->
       </section><!-- /MAIN CONTENT -->
