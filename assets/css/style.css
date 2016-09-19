@@ -836,10 +836,11 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .box1 {
-	padding: 15px;
-	text-align: center;
-	color: #989898;
-	border-bottom: 1px solid #989898;
+    padding: 5px;  /* Changed from 10px */
+    text-align: center;
+    color: #989898;
+    border-bottom: 1px solid #989898;
+    margin-bottom: 0px;
 }
 
 .box1 span {
@@ -2278,3 +2279,20 @@ img{
 .case-right{
    margin: 0 20px;
 }
+
+.custom-statistics-box1{
+    border-bottom: none;
+    border-left:    1px solid #989898;
+    border-bottom: none;
+}
+
+#first_box1{
+    border-left: none;
+}
+
+.panel-body-less-padding{
+    padding: 0px;
+}
+
+
+
