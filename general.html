@@ -13,6 +13,7 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	  <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
 
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -111,20 +112,28 @@
                     <!-- INTRO TO THE CASE -->
                     <div class="row">
                       <p class="intro intro-cases">
-                          On January the 18th 2016, Djokovic revealed that some years ago he was approached indirectly with a £100,000 offer in order to lose a match.
-                          The revealed scandal provoked a storm of reactions from the other tennis players, news agencies as well as the social media, where there was
-                          an burst of users expressing their opinions regarding Djokovic, match fixing and other related topics.
-
+                        On January the 18th 2016, Djokovic revealed that some years ago he was approached indirectly with a £100,000 offer in order to lose a match.
+                        The revealed scandal provoked a storm of reactions from the other tennis players, news agencies as well as the social media, where there was
+                        an burst of users expressing their opinions regarding Djokovic, match fixing and other related topics.
                       </p>
                     </div>
                     <!-- TWEETS PER DAY PLOT -->
                     <div class="row mt case-charts">
                       <!-- <div class="content-panel"> -->
-                          <h4><i class="fa fa-angle-right"></i> Tweets per Day</h4>
-                          <div class="panel-body">
-                              <div id="hero-graph" class="graph"></div>
-                          </div>
+                      <h4><i class="fa fa-angle-right"></i> Tweets per Day</h4>
+                      <div class="panel-body">
+                          <div id="hero-graph" class="graph"></div>
+                      </div>
                       <!-- </div> -->
+                    </div>
+                    <!-- TAG CLOUD - WORDS -->
+                    <div class="row mt case-charts">
+                      <h4><i class="fa fa-angle-right"></i> Most Frequent Words</h4>
+                      <div class="panel-body">
+                        <div class="tag-cloud">
+                          <script src="http://cdn.tagul.com/embed/cb2bnhzc0fwh"></script>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-3 col-sm-3">
@@ -181,38 +190,107 @@
                   </div>
               </div>
               <!-- TAG CLOUDS !!! draft photos -->
-              <div class="row mt">
-                <div class="case-charts">
-                  <!-- <div class="content-panel"> -->
-                    <h4><i class="fa fa-angle-right"></i> Most frequent hashtags / words / mentions</h4>
-                    <div class="panel-body">
-                      <div class="col-lg-4 tag-cloud">
-                        <script src="http://cdn.tagul.com/embed/eulahskx892d"></script>
-                      </div>
-                      <div class="col-lg-4 tag-cloud">
-                        <script src="http://cdn.tagul.com/embed/cb2bnhzc0fwh"></script>
-                      </div>
-                      <div class="col-lg-4 tag-cloud">
-                        <script src="http://cdn.tagul.com/embed/8beavw8xhfjk"></script>
-                      </div>
-                    <!-- </div> -->
+              <div class="row mt case-charts">
+                <div class="col-md-9">
+                  <h4><i class="fa fa-angle-right"></i> Most Frequent Hashtags</h4>
+                  <div class="tag-cloud">
+                    <script src="http://cdn.tagul.com/embed/eulahskx892d"></script>
                   </div>
                 </div>
+                <div class="col-md-3">
+                  <table class="table table-hover mt">
+                    <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Word</th>
+                          <th>Frequency</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>#betting</td>
+                          <td>3501</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>#prediction</td>
+                          <td>1744</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>#tip</td>
+                          <td>1586</td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>#1x2</td>
+                          <td>1335</td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>#livescore</td>
+                          <td>899</td>
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td>#inplay_betting</td>
+                          <td>897</td>
+                      </tr>
+                      <tr>
+                          <td>7</td>
+                          <td>#FSTINPLAY</td>
+                          <td>554</td>
+                      </tr>
+                      <tr>
+                          <td>8</td>
+                          <td>#soccerbets</td>
+                          <td>411</td>
+                      </tr>
+                      <tr>
+                          <td>9</td>
+                          <td>#Euro2016</td>
+                          <td>360</td>
+                      </tr>
+                      <tr>
+                          <td>10</td>
+                          <td>#inplay</td>
+                          <td>357</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
+
+
+
+
+
+              <!-- <div class="row mt case-charts">
+                <h4><i class="fa fa-angle-right"></i> Most frequent mentions</h4>
+                <div class="panel-body">
+                  <div class="tag-cloud">
+                    <script src="http://cdn.tagul.com/embed/8beavw8xhfjk"></script>
+                  </div>
+                </div>
+              </div> -->
+
+
               <!-- USERS - MAP !!! draft photos -->
               <div class="row mt">
                 <div class="case-charts">
-                  <!-- <div class="content-panel"> -->
-                    <h4><i class="fa fa-angle-right"></i> Most Frequent Users / Location Map</h4>
-                    <div class="panel-body">
-                      <div class="col-lg-4">
-                        <img src="images/users-freq.jpg"/>
-                      </div>
-                      <div class="col-lg-8">
-                        <img src="images/map.png"/>
-                      </div>
-                    </div>
-                  <!-- </div> -->
+                  <h4><i class="fa fa-angle-right"></i> Most Frequent Users &amp; Mentions / Location Map</h4>
+                  <div class="col-lg-4">
+                    <img src="images/users-freq.jpg"/>
+                  </div>
+                  <div class="col-lg-8 tag-cloud">
+                    <script src="http://cdn.tagul.com/embed/8beavw8xhfjk"></script>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt">
+                <div class="case-charts">
+                  <img src="images/map.png"/>
                 </div>
               </div>
           </section><!--/wrapper -->
@@ -242,9 +320,14 @@
 
 
     <!--common script for all pages-->
+	  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	  <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
+    <script src="assets/js/morris-plain.js"></script>
+    <script src="assets/js/chart-master/Chart.js"></script>
+    <script src="assets/js/chartjs-conf.js"></script>
 
   <script>
       //custom select box
