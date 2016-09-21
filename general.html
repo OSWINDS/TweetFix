@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <meta name="author" content="OSWINDS">
+    <meta name="keyword" content="Fixing, Sports, Analytics, Data, Twitter, YouTube, Corruption, Match">
 
     <title>TWEETFIX</title>
 
@@ -18,6 +18,11 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.anychart.com/css/latest/anychart-ui.css">
+
+    <script src="http://cdn.anychart.com/js/latest/anymap.min.js" type="text/javascript"></script>
+    <script src="http://cdn.anychart.com/js/latest/anychart.min.js" type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/geodata/countries/aus/australia.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -112,9 +117,9 @@
                     <!-- INTRO TO THE CASE -->
                     <div class="row">
                       <p class="intro intro-cases">
-                        On January the 18th 2016, Djokovic revealed that some years ago he was approached indirectly with a £100,000 offer in order to lose a match.
-                        The revealed scandal provoked a storm of reactions from the other tennis players, news agencies as well as the social media, where there was
-                        an burst of users expressing their opinions regarding Djokovic, match fixing and other related topics.
+                        This first case is used to examine the Social Media presence of the "Sports Fixing" topic, understand the crowd that is engaged with the topic
+                        and determine some basic set of words and hashtags that are frequently used in such posts. The query for this case was consisted of plain words,
+                        without studying any specific event.
                       </p>
                     </div>
                     <!-- TWEETS PER DAY PLOT -->
@@ -261,21 +266,6 @@
                   </table>
                 </div>
               </div>
-
-
-
-
-
-              <!-- <div class="row mt case-charts">
-                <h4><i class="fa fa-angle-right"></i> Most frequent mentions</h4>
-                <div class="panel-body">
-                  <div class="tag-cloud">
-                    <script src="http://cdn.tagul.com/embed/8beavw8xhfjk"></script>
-                  </div>
-                </div>
-              </div> -->
-
-
               <!-- USERS - MAP !!! draft photos -->
               <div class="row mt">
                 <div class="case-charts">
@@ -289,9 +279,40 @@
                 </div>
               </div>
               <div class="row mt">
-                <div class="case-charts">
+                <!-- <div class="case-charts">
                   <img src="images/map.png"/>
-                </div>
+                </div> -->
+                <div id="map" style="width: 500px; height: 400px;"></div>
+                <script>
+                  anychart.onDocumentReady(
+                    function() {
+                      var dataSet = anychart.data.set([
+                      		{'id': 'AU.WA', 'value': 300},
+                      		{'id': 'AU.JB', 'value': 230},
+                      		{'id': 'AU.NS', 'value': 240},
+                      		{'id': 'AU.VI', 'value': 275},
+                      		{'id': 'AU.NT', 'value': 130},
+                      		{'id': 'AU.TS', 'value': 190},
+                      		{'id': 'AU.CT', 'value': 100},
+                      		{'id': 'AU.SA', 'value': 305},
+                      		{'id': 'AU.QL', 'value': 190}
+                      ]);
+
+                      //
+                      var map = anychart.map();
+                      map.geoData(anychart.maps.australia);
+
+                      // set the series
+                      var series = map.choropleth(dataSet);
+
+                      // disable labels
+                      series.labels(false);
+
+                      // set the container
+                      map.container('map');
+                      map.draw();
+                    });
+                </script>
               </div>
           </section><!--/wrapper -->
       </section><!-- /MAIN CONTENT -->

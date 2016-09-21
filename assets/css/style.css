@@ -836,7 +836,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .box1 {
-    padding: 5px;  /* Changed from 10px */
+    padding-top: 25px;  /* Changed from padding: 10px; */
     text-align: center;
     color: #989898;
     border-bottom: 1px solid #989898;
@@ -2265,7 +2265,7 @@ label {
 }
 
 .case-charts{
-    padding: 0 40px 0 60px;
+    padding: 0 40px 0 40px;
 }
 
 img{
@@ -2292,9 +2292,4 @@ img{
 
 .panel-body-less-padding{
     padding: 0px;
-}
-
-.tag-cloud{
-    width: 300px;
-    height: 300px;
 }
