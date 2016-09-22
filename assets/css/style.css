@@ -2293,3 +2293,9 @@ img{
 .panel-body-less-padding{
     padding: 0px;
 }
+
+.map{
+  width: 100%;
+  height: 400px;
+  background-color: black;
+}

@@ -20,9 +20,9 @@
     <link href="assets/css/style-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="http://cdn.anychart.com/css/latest/anychart-ui.css">
 
-    <script src="http://cdn.anychart.com/js/latest/anymap.min.js" type="text/javascript"></script>
     <script src="http://cdn.anychart.com/js/latest/anychart.min.js" type="text/javascript"></script>
-    <script src="https://cdn.anychart.com/geodata/countries/aus/australia.js"></script>
+    <script src="http://cdn.anychart.com/js/latest/anymap.min.js" type="text/javascript"></script>
+    <script src="http://cdn.anychart.com/geodata/1.2.0/custom/world_source/world_source.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -278,39 +278,95 @@
                   </div>
                 </div>
               </div>
-              <div class="row mt">
-                <!-- <div class="case-charts">
-                  <img src="images/map.png"/>
-                </div> -->
-                <div id="map" style="width: 500px; height: 400px;"></div>
+              <div class="row mt case-charts">
+                <div class="map" id="map"></div>
                 <script>
                   anychart.onDocumentReady(
                     function() {
+                      map = anychart.map();
+
                       var dataSet = anychart.data.set([
-                      		{'id': 'AU.WA', 'value': 300},
-                      		{'id': 'AU.JB', 'value': 230},
-                      		{'id': 'AU.NS', 'value': 240},
-                      		{'id': 'AU.VI', 'value': 275},
-                      		{'id': 'AU.NT', 'value': 130},
-                      		{'id': 'AU.TS', 'value': 190},
-                      		{'id': 'AU.CT', 'value': 100},
-                      		{'id': 'AU.SA', 'value': 305},
-                      		{'id': 'AU.QL', 'value': 190}
+                        {'id': 'IN', 'value': 64},
+                        {'id': 'AU', 'value': 55},
+                        {'id': 'FR', 'value': 54},
+                        {'id': 'PH', 'value': 53},
+                        {'id': 'GB', 'value': 49},
+                        {'id': 'NG', 'value': 48},
+                        {'id': 'US', 'value': 48},
+                        {'id': 'CA', 'value': 46},
+                        {'id': 'DE', 'value': 36},
+                        {'id': 'IE', 'value': 36},
+                        {'id': 'MY', 'value': 35},
+                        {'id': 'ES', 'value': 34},
+                        {'id': 'JP', 'value': 33},
+                        {'id': 'ZA', 'value': 30},
+                        {'id': 'NZ', 'value': 25},
+                        {'id': 'PK', 'value': 25},
+                        {'id': 'SA', 'value': 23},
+                        {'id': 'IT', 'value': 21},
+                        {'id': 'BE', 'value': 21},
+                        {'id': 'GH', 'value': 20},
+                        {'id': 'CN', 'value': 18},
+                        {'id': 'AE', 'value': 17},
+                        {'id': 'ID', 'value': 15},
+                        {'id': 'CM', 'value': 15},
+                        {'id': 'TR', 'value': 14},
+                        {'id': 'AR', 'value': 13},
+                        {'id': 'FI', 'value': 12},
+                        {'id': 'PT', 'value': 12},
+                        {'id': 'KE', 'value': 12},
+                        {'id': 'QA', 'value': 9},
+                        {'id': 'PL', 'value': 9},
+                        {'id': 'BW', 'value': 9},
+                        {'id': 'SE', 'value': 8},
+                        {'id': 'BR', 'value': 7},
+                        {'id': 'PA', 'value': 7},
+                        {'id': 'KR', 'value': 7},
+                        {'id': 'NL', 'value': 6},
+                        {'id': 'HK', 'value': 6},
+                        {'id': 'CH', 'value': 6},
+                        {'id': 'ZM', 'value': 5},
+                        {'id': 'UG', 'value': 5},
+                        {'id': 'BD', 'value': 5},
+                        {'id': 'MX', 'value': 5},
+                        {'id': 'ZW', 'value': 5},
+                        {'id': 'RU', 'value': 4},
+                        {'id': 'CL', 'value': 4},
+                        {'id': 'TZ', 'value': 4},
+                        {'id': 'DK', 'value': 3},
+                        {'id': 'GR', 'value': 3},
+                        {'id': 'TH', 'value': 1},
+                        {'id': 'SK', 'value': 1},
+                        {'id': 'CO', 'value': 1}
                       ]);
 
-                      //
-                      var map = anychart.map();
-                      map.geoData(anychart.maps.australia);
+                      // create choropleth series
+                      series = map.choropleth(dataSet);
 
-                      // set the series
-                      var series = map.choropleth(dataSet);
+                      // set geoIdField to 'id', this field contains in geo data meta properties
+                      series.geoIdField('id');
 
-                      // disable labels
+                      // set map color settings
+                      series.colorScale(anychart.scales.linearColor('#effbfd', '#68dff0'));
+                      series.hoverFill('#ed5565');
+
+                      // disable series labels
                       series.labels(false);
 
-                      // set the container
+                      // set map title
+                      map.title().enabled(true).text('Most Frequent Locations talking about Match Fixing\n');
+
+                      // set geo data, you can find this map in our geo maps collection
+                      // http://cdn.anychart.com/#maps-collection
+                      map.geoData(anychart.maps['world_source']);
+
+                      //set map container id (div)
                       map.container('map');
+
+                      //initiate map drawing
                       map.draw();
+
+                      // anychart.installStyles('body{font-family:Verdana,\'Helvetica Neue\',Arial,Helvetica,Geneva,sans-serif;background-color:red;}');
                     });
                 </script>
               </div>
