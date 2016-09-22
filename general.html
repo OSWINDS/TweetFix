@@ -14,11 +14,11 @@
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 	  <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <link rel="stylesheet" href="http://cdn.anychart.com/css/latest/anychart-ui.css">
 
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdn.anychart.com/css/latest/anychart-ui.css">
 
     <script src="http://cdn.anychart.com/js/latest/anychart.min.js" type="text/javascript"></script>
     <script src="http://cdn.anychart.com/js/latest/anymap.min.js" type="text/javascript"></script>
@@ -35,7 +35,7 @@
 
   <section id="container" >
       <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
+      TOP BAR CONTENT
       *********************************************************************************************************************************************************** -->
       <!--header start-->
       <header class="header black-bg">
@@ -45,8 +45,6 @@
             <!--logo start-->
             <a href="index.html" class="logo"><b>FIX THE TWITTER</b></a>
             <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-            </div>
             <div class="top-menu">
               <ul class="nav pull-right top-menu">
                     made by OSWINDS
@@ -98,7 +96,6 @@
                           <span>About</span>
                       </a>
                   </li>
-
               </ul>
               <!-- sidebar menu end-->
           </div>
@@ -112,6 +109,8 @@
       <section id="main-content">
           <section class="wrapper site-min-height">
               <h2><i class="fa fa-angle-right"></i> General Case</h2>
+
+              <!-- FIRST ROW - INTRO / LINE CHART / TAG CLOUD / INFOBOX -->
               <div class="row mt">
                   <div class="col-lg-9 col-md-9 col-sm-9">
                     <!-- INTRO TO THE CASE -->
@@ -124,12 +123,10 @@
                     </div>
                     <!-- TWEETS PER DAY PLOT -->
                     <div class="row mt case-charts">
-                      <!-- <div class="content-panel"> -->
                       <h4><i class="fa fa-angle-right"></i> Tweets per Day</h4>
                       <div class="panel-body">
                           <div id="hero-graph" class="graph"></div>
                       </div>
-                      <!-- </div> -->
                     </div>
                     <!-- TAG CLOUD - WORDS -->
                     <div class="row mt case-charts">
@@ -194,14 +191,17 @@
                       </div>
                   </div>
               </div>
-              <!-- TAG CLOUDS !!! draft photos -->
+
+              <!-- SECOND ROW - TAG CLOUDS / BUBBLE CHART / LOCATION MAP -->
               <div class="row mt case-charts">
+                <!-- TAG CLOUD - HASHTAGS -->
                 <div class="col-md-9">
                   <h4><i class="fa fa-angle-right"></i> Most Frequent Hashtags</h4>
                   <div class="tag-cloud">
                     <script src="http://cdn.tagul.com/embed/eulahskx892d"></script>
                   </div>
                 </div>
+                <!-- TABLE OF MOST FREQUENT HASHTAGS -->
                 <div class="col-md-3">
                   <table class="table table-hover mt">
                     <thead>
@@ -266,18 +266,20 @@
                   </table>
                 </div>
               </div>
-              <!-- USERS - MAP !!! draft photos -->
               <div class="row mt">
                 <div class="case-charts">
                   <h4><i class="fa fa-angle-right"></i> Most Frequent Users &amp; Mentions / Location Map</h4>
+                  <!-- BUBBLE CHART - MENTIONS -->
                   <div class="col-lg-4">
                     <img src="images/users-freq.jpg"/>
                   </div>
+                  <!-- TAG CLOUD - USERS -->
                   <div class="col-lg-8 tag-cloud">
                     <script src="http://cdn.tagul.com/embed/8beavw8xhfjk"></script>
                   </div>
                 </div>
               </div>
+              <!-- FREQUENT LOCATIONS MAP -->
               <div class="row mt case-charts">
                 <div class="map" id="map"></div>
                 <script>
@@ -285,6 +287,7 @@
                     function() {
                       map = anychart.map();
 
+                      // insert data
                       var dataSet = anychart.data.set([
                         {'id': 'IN', 'value': 64},
                         {'id': 'AU', 'value': 55},
@@ -350,7 +353,7 @@
                       series.colorScale(anychart.scales.linearColor('#effbfd', '#68dff0'));
                       series.hoverFill('#ed5565');
 
-                      // disable series labels
+                      // disable countries' labels
                       series.labels(false);
 
                       // set map title
