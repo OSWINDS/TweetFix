@@ -12,7 +12,7 @@ Premium: http://www.gridgum.com
 /* BASIC THEME CONFIGURATION */
 body {
     color: #797979;
-	background: #f2f2f2;
+	  background: #f2f2f2;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -836,7 +836,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .box1 {
-    padding: 5px;  /* Changed from 10px */
+    padding-top: 25px;  /* Changed from padding: 10px; */
     text-align: center;
     color: #989898;
     border-bottom: 1px solid #989898;
@@ -2265,7 +2265,7 @@ label {
 }
 
 .case-charts{
-    padding: 0 40px 0 60px;
+    padding: 0 40px 0 40px;
 }
 
 img{
@@ -2294,5 +2294,8 @@ img{
     padding: 0px;
 }
 
-
-
+.map{
+  width: 100%;
+  height: 400px;
+  background-color: black;
+}
