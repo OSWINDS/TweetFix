@@ -2299,3 +2299,20 @@ img{
   height: 400px;
   background-color: black;
 }
+
+.infopop{
+    background-color: rgba(128,128,128,1.0);
+    display: none;
+    width: 30%;
+    position: absolute;
+    float: right;
+    border-radius: 5%;
+    text-align: justify;
+}
+
+.infopop p{
+    color: white;
+    padding: 5%;
+
+}
+
