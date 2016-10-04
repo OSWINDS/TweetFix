@@ -7,14 +7,13 @@ window.onload = function(){
 
         $(".infopop-icon").hover(
             function () {
-                    $(".infopop").fadeIn(200);
+                    $(this).parent().next().fadeIn(200);
                 }
                 ,
             function () {
-                    $(".infopop").fadeOut(200);
+                    $(this).parent().next().fadeOut(200);
             }
                 );
 
 
 }
-
