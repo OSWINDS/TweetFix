@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <hea>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -78,7 +78,7 @@
                           <span>Cases</span>
                       </a>
                       <ul class="sub">
-                          <li class="active"><a  href="general.html">General</a></li>
+                          <li class="active"><a  href="general.php">General</a></li>
                           <li><a  href="djokovic.html">N. Djokovic</a></li>
                           <li><a  href="donaghy.html">Donaghy</a></li>
                           <li><a  href="cricket.html">Pakistani Cricket</a></li>
@@ -216,67 +216,10 @@
                 </div>
                 <!-- TABLE OF MOST FREQUENT HASHTAGS -->
                 <div class="col-md-3">
-                  <table class="table table-hover mt">
-                    <thead>
-                      <tr>
-                          <th>#</th>
-                          <th>Word</th>
-                          <th>Frequency</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                          <td>1</td>
-                          <td>#betting</td>
-                          <td>3501</td>
-                      </tr>
-                      <tr>
-                          <td>2</td>
-                          <td>#prediction</td>
-                          <td>1744</td>
-                      </tr>
-                      <tr>
-                          <td>3</td>
-                          <td>#tip</td>
-                          <td>1586</td>
-                      </tr>
-                      <tr>
-                          <td>4</td>
-                          <td>#1x2</td>
-                          <td>1335</td>
-                      </tr>
-                      <tr>
-                          <td>5</td>
-                          <td>#livescore</td>
-                          <td>899</td>
-                      </tr>
-                      <tr>
-                          <td>6</td>
-                          <td>#inplay_betting</td>
-                          <td>897</td>
-                      </tr>
-                      <tr>
-                          <td>7</td>
-                          <td>#FSTINPLAY</td>
-                          <td>554</td>
-                      </tr>
-                      <tr>
-                          <td>8</td>
-                          <td>#soccerbets</td>
-                          <td>411</td>
-                      </tr>
-                      <tr>
-                          <td>9</td>
-                          <td>#Euro2016</td>
-                          <td>360</td>
-                      </tr>
-                      <tr>
-                          <td>10</td>
-                          <td>#inplay</td>
-                          <td>357</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <?php
+                        include "table_generator.php";
+                        generate_table('Results/test.csv',',');
+                    ?>
                 </div>
               </div>
               <div class="row mt">
