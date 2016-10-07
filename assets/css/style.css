@@ -2328,3 +2328,21 @@ img{
     margin-left: 60px;
     margin-top: 20px;
 }
+
+.top-menu {
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.top-menu-oswinds{
+    font-size: 15px;
+    color: #797979;
+}
+
+.top-menu-social-media{
+    font-size: 20px;
+}
+
+.top-menu-social-media a{
+    color: #797979;
+}
