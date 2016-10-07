@@ -113,7 +113,7 @@
           <section class="wrapper site-min-height">
               <h2><i class="fa fa-angle-right"></i> The Donaghy Case</h2>
 
-              <!-- FIRST ROW - INTRO / LINE CHART / TAG CLOUD / INFOBOX -->
+              <!-- FIRST ROW: INTRO / LINE CHART / TAG CLOUD / INFOBOX -->
               <div class="row mt">
                   <div class="col-lg-9 col-md-9 col-sm-9">
                     <!-- INTRO TO THE CASE -->
@@ -128,27 +128,25 @@
                           and other related topics.
                       </p>
                     </div>
-                    <!-- TWEETS PER DAY PLOT -->
+                    <!-- TWEETS PER MONTH PLOT -->
                     <div class="row mt case-charts">
-                        <h4><i class="fa fa-angle-right"></i> Tweets per Day <i class="fa fa-info-circle infopop-icon"></i> </h4>
+                        <h4><i class="fa fa-angle-right"></i> Tweets per Month <i class="fa fa-info-circle infopop-icon"></i> </h4>
                         <div class="infopop">
                             <p>Contains the count of tweets submitted every month during the researching period.</p>
                         </div>
 
                       <div class="panel-body">
-                          <div id="hero-graph" class="graph"></div>
+                          <div id="date-graph" class="graph"></div>
                       </div>
                     </div>
-                    <!-- TAG CLOUD - WORDS -->
+                    <!-- SENTIMENT PER MONTH PLOT -->
                     <div class="row mt case-charts">
-                      <h4><i class="fa fa-angle-right"></i> Most Frequent Words <i class="fa fa-info-circle infopop-icon"></i> </h4>
+                      <h4><i class="fa fa-angle-right"></i> Sentiment per Month <i class="fa fa-info-circle infopop-icon"></i> </h4>
                       <div class="infopop">
-                          <p>Contains the most frequent distinct words as extracted from the final data during the researching period.</p>
+                          <p>Contains information about the scores of six basic sentiments, on each month.</p>
                       </div>
                       <div class="panel-body">
-                        <div class="tag-cloud">
-                          <script src="http://cdn.tagul.com/embed/1ha31xzunw5x"></script>
-                        </div>
+                        <div id="sentiment-graph" class="graph"></div>
                       </div>
                     </div>
                   </div>
@@ -206,7 +204,86 @@
                   </div>
               </div>
 
-              <!-- SECOND ROW - TAG CLOUDS / BUBBLE CHART / LOCATION MAP -->
+
+              <!-- SECOND ROW: TAG CLOUD - WORDS -->
+              <div class="row mt case-charts">
+                  <h4><i class="fa fa-angle-right"></i> Most Frequent Words <i class="fa fa-info-circle infopop-icon"></i> </h4>
+                  <div class="col-md-3">
+                    <table class="table table-hover mt">
+                      <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Word</th>
+                            <th>Frequency</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>donaghy</td>
+                            <td>17472</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>tim</td>
+                            <td>17298</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>nba</td>
+                            <td>6272</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>game</td>
+                            <td>4401</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>bit</td>
+                            <td>1470</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>referee</td>
+                            <td>1360</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>former</td>
+                            <td>1150</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>tonight</td>
+                            <td>909</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>officiating</td>
+                            <td>907</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>book</td>
+                            <td>788</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-md-9">
+                      <div class="infopop">
+                          <p>Contains the most frequent distinct words as extracted from the final data during the researching period.</p>
+                      </div>
+                      <div class="panel-body">
+                        <div class="tag-cloud">
+                          <script src="http://cdn.tagul.com/embed/1ha31xzunw5x"></script>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- THIRD ROW: TAG CLOUDS - HASHTAGS & MENTIONS / BUBBLE CHART / LOCATION MAP -->
               <div class="row mt case-charts">
                 <!-- TAG CLOUD - HASHTAGS -->
                 <div class="col-md-9">
