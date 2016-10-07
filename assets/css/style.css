@@ -2321,5 +2321,10 @@ img{
 }
 
 .intro-infobox .box0:hover p {
-	color: #ff865c;
+	  color: #ff865c;
+}
+
+.query-words {
+    margin-left: 60px;
+    margin-top: 20px;
 }
