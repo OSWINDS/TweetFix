@@ -370,7 +370,7 @@
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/morris-plain.js"></script>
+    <script src="assets/js/morris/morris-plain.js"></script>
 
   </body>
 </html>
