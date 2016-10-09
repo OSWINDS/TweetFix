@@ -119,7 +119,7 @@
           <section class="wrapper site-min-height">
               <h2><i class="fa fa-angle-right"></i> General Case</h2>
 
-              <!-- FIRST ROW - INTRO / LINE CHART / TAG CLOUD / INFOBOX -->
+              <!-- FIRST ROW: INTRO / LINE CHART / TAG CLOUD / INFOBOX -->
               <div class="row mt">
                   <div class="col-lg-9 col-md-9 col-sm-9">
                     <!-- INTRO TO THE CASE -->
@@ -129,10 +129,26 @@
                         and determine some basic set of words and hashtags that are frequently used in such posts. The query for this case was consisted of plain words,
                         without studying any specific event.
                       </p>
+                      <p class="query-words">
+                          Query Words:
+        							    <span class="label label-info">match</span>
+        							    <span class="label label-info">fixing</span>
+        							    <span class="label label-info">fix</span>
+        							    <span class="label label-info">betting</span>
+        							    <span class="label label-info">bet</span>
+        							    <span class="label label-info">corruption</span>
+        							    <span class="label label-info">scam</span>
+        							    <span class="label label-info">gambling</span>
+        							    <span class="label label-info">fraud</span>
+        							    <span class="label label-info">illegal</span>
+        							    <span class="label label-info">suspicious</span>
+        							    <span class="label label-info">manipulation</span>
+        							    <span class="label label-info">integrity</span>
+                      </p>
                     </div>
                     <!-- TWEETS PER DAY PLOT -->
                     <div class="row mt case-charts">
-                        <h4><i class="fa fa-angle-right"></i> Tweets per Day <i class="fa fa-info-circle infopop-icon"></i> </h4>
+                        <h4><i class="fa fa-angle-right"></i> Tweets per Month <i class="fa fa-info-circle infopop-icon"></i> </h4>
                         <div class="infopop">
                             <p>Contains the count of tweets submitted every month during the researching period.</p>
                         </div>
@@ -141,16 +157,14 @@
                           <div id="hero-graph" class="graph"></div>
                       </div>
                     </div>
-                    <!-- TAG CLOUD - WORDS -->
+                    <!-- SENTIMENT PER MONTH PLOT -->
                     <div class="row mt case-charts">
-                      <h4><i class="fa fa-angle-right"></i> Most Frequent Words <i class="fa fa-info-circle infopop-icon"></i> </h4>
+                      <h4><i class="fa fa-angle-right"></i> Sentiment per Month <i class="fa fa-info-circle infopop-icon"></i> </h4>
                       <div class="infopop">
-                          <p>Contains the most frequent distinct words as extracted from the final data during the researching period.</p>
+                          <p>Contains information about the scores of six basic sentiments (Anger, Disgust, Fear, Joy, Sadness &amp; Surprise), on each month.</p>
                       </div>
                       <div class="panel-body">
-                        <div class="tag-cloud">
-                          <script src="http://cdn.tagul.com/embed/cb2bnhzc0fwh"></script>
-                        </div>
+                        <div id="sentiment-graph" class="graph"></div>
                       </div>
                     </div>
                   </div>
@@ -160,55 +174,131 @@
                         <h4><i class="fa fa-angle-right"></i> Infobox</h4>
                         <div class="panel-body ">
                           <div class="row panel-body-less-padding">
-
                               <div class="box0 box1">
                                   <span class="fa fa-twitter"></span>
                                   <h3>62.319</h3>
                                   <p>62.319 distinct tweets</p>
                               </div>
-
                           </div>
-                            <div class="row">
+                          <div class="row">
                               <div class="box0 box1">
                                   <span class="fa fa-youtube"></span>
                                   <h3>1228</h3>
                                   <p>1228 distinct Youtube comments</p>
                               </div>
                           </div>
-                            <div class="row">
-                                 <div class="box0 box1">
-                                      <span class="fa fa-user"></span>
-                                      <h3>34.227</h3>
-                                      <p>34.227 distinct users</p>
-                                  </div>
-                              </div>
-                            <div class="row">
-                                  <div class="box0 box1">
-                                      <span class="fa fa-list"></span>
-                                      <h3>53.526</h3>
-                                      <p>53.526 distinct words</p>
-                                  </div>
-                            </div>
-                            <div class="row">
-                                <div class="box0 box1">
-                                    <span class="fa fa-calendar-o"></span>
-                                    <h4 class="date-box">01/01/2016 to 30/06/2016</h4>
-                                    <p>The time frame of the data is 6 months</p>
+                          <div class="row">
+                               <div class="box0 box1">
+                                    <span class="fa fa-user"></span>
+                                    <h3>34.227</h3>
+                                    <p>34.227 distinct users</p>
                                 </div>
-                            </div>
+                          </div>
+                          <div class="row">
+                                <div class="box0 box1">
+                                    <span class="fa fa-list"></span>
+                                    <h3>53.526</h3>
+                                    <p>53.526 distinct words</p>
+                                </div>
+                          </div>
+                          <div class="row">
+                              <div class="box0 box1">
+                                  <span class="fa fa-calendar-o"></span>
+                                  <h4>01/01/2016 to 30/06/2016</h4>
+                                  <p>The time frame of the data is 6 months</p>
+                              </div>
+                          </div>
                           <!-- SENTIMENT ANALYSIS SCORES -->
                           <div class="row">
-                                <div class="box0 box1 box-SA">
-                                    <h3>SA Score: <span style="font-size: 32px; color: #ff865c;">Neutral</span></h3>
-                                    <p>The overall score of our sentiment analysis was Neutral.</p>
-                                </div>
-                            </div>
+                              <div class="box0 box1 box-SA">
+                                  <h3>Sentiment: <span style="font-size: 32px; color: #ffd777;">Disgust</span></h3>
+                                  <p>The overall score of our sentiment analysis indicated the main sentiment of the users was Disgust.</p>
+                              </div>
+                          </div>
                         </div>
                       </div>
                   </div>
               </div>
 
-              <!-- SECOND ROW - TAG CLOUDS / BUBBLE CHART / LOCATION MAP -->
+              <!-- SECOND ROW: TAG CLOUD - WORDS -->
+              <div class="row mt case-charts">
+                  <h4><i class="fa fa-angle-right"></i> Most Frequent Words <i class="fa fa-info-circle infopop-icon"></i> </h4>
+                  <div class="col-md-3">
+                    <table class="table table-hover mt">
+                      <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Word</th>
+                            <th>Frequency</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>match</td>
+                            <td>52474</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>bet</td>
+                            <td>36311</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>fix</td>
+                            <td>32004</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>tips</td>
+                            <td>6046</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>goal</td>
+                            <td>5302</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>twitter</td>
+                            <td>4616</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>win</td>
+                            <td>3762</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>free</td>
+                            <td>3629</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>today</td>
+                            <td>3351</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>odds</td>
+                            <td>3164</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-md-9">
+                      <div class="infopop">
+                          <p>Contains the most frequent distinct words as extracted from the final data during the researching period.</p>
+                      </div>
+                      <div class="panel-body">
+                        <div class="tag-cloud">
+                          <script src="http://cdn.tagul.com/embed/cb2bnhzc0fwh"></script>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- THIRD ROW: TAG CLOUDS - HASHTAGS & MENTIONS / BUBBLE CHART / LOCATION MAP -->
               <div class="row mt case-charts">
                 <!-- TAG CLOUD - HASHTAGS -->
                 <div class="col-md-9">
@@ -227,6 +317,69 @@
                         generate_table('Results/test.csv',',');
                     ?>
                 </div>
+                <!-- <div class="col-md-3">
+                  <table class="table table-hover mt">
+                    <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Word</th>
+                          <th>Frequency</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>#betting</td>
+                          <td>3501</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>#prediction</td>
+                          <td>1744</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>#tip</td>
+                          <td>1586</td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>#1X2</td>
+                          <td>1335</td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>#livescore</td>
+                          <td>899</td>
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td>#inplay_betting</td>
+                          <td>897</td>
+                      </tr>
+                      <tr>
+                          <td>7</td>
+                          <td>#inplay</td>
+                          <td>757</td>
+                      </tr>
+                      <tr>
+                          <td>8</td>
+                          <td>#FSTINPLAY</td>
+                          <td>554</td>
+                      </tr>
+                      <tr>
+                          <td>9</td>
+                          <td>#Euro2016</td>
+                          <td>554</td>
+                      </tr>
+                      <tr>
+                          <td>10</td>
+                          <td>#soccerbets</td>
+                          <td>411</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
               </div>
               <div class="row mt">
                 <div class="case-charts">
