@@ -2343,6 +2343,10 @@ img{
     color: #797979;
 }
 
+.top-menu-social-media a:hover{
+    color: #424a5d;
+}
+
 .about-project{
     margin: 60px 20px 0;
     font-size: 18px;
