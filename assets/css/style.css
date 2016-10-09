@@ -2349,20 +2349,36 @@ img{
     text-align: justify;
 }
 
+.about-project a{
+    font-size: 18px;
+}
+
 .about-oswinds, .about-oswinds-contact{
-    margin: 20px 10px 0;
-    font-size: 14px;
+    margin: 0 35px 0;
+    font-size: 16px;
     text-align: justify;
 }
 
-.about-oswinds a, .about-oswinds-sm a{
+.about-project a,.about-oswinds a, .about-oswinds-sm a{
     color: #5bc0de;
 }
 
-.about-oswinds a:hover, .about-oswinds-sm a:hover{
+.about-project a:hover, .about-oswinds a:hover, .about-oswinds-sm a:hover{
     color: #ff865c;
 }
 
 .about-oswinds-sm{
     font-size: 24px;
+}
+
+.about-flow{
+    margin-top: 60px;
+}
+
+.about-line{
+    margin: 50px 20px 10px;
+    background: transparent;
+    height: 0px;
+    border: 0px solid transparent;
+    border-bottom: 1px solid #797979;
 }
