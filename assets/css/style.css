@@ -19,10 +19,6 @@ body {
     font-size:13px;
 }
 
-ul li {
-    list-style: none;
-}
-
 a, a:hover, a:focus {
     text-decoration: none;
     outline: none;
@@ -2345,4 +2341,44 @@ img{
 
 .top-menu-social-media a{
     color: #797979;
+}
+
+.about-project{
+    margin: 60px 20px 0;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.about-project a{
+    font-size: 18px;
+}
+
+.about-oswinds{
+    margin: 0 35px 0;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about-project a,.about-oswinds a, .about-oswinds-sm a{
+    color: #5bc0de;
+}
+
+.about-project a:hover, .about-oswinds a:hover, .about-oswinds-sm a:hover{
+    color: #ff865c;
+}
+
+.about-oswinds-sm{
+    font-size: 24px;
+}
+
+.about-flow{
+    margin-top: 60px;
+}
+
+.about-line{
+    margin: 50px 20px 10px;
+    background: transparent;
+    height: 0px;
+    border: 0px solid transparent;
+    border-bottom: 1px solid #797979;
 }
