@@ -2377,6 +2377,7 @@ img{
 
 .about-flow{
     margin-top: 60px;
+	max-width: 250px;
 }
 
 .about-line{
