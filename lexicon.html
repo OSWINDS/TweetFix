@@ -82,6 +82,7 @@
                           <li><a  href="donaghy.html">T. Donaghy</a></li>
                           <li><a  href="football.html">Southern Stars</a></li>
                           <li><a  href="cricket.html">Pakistani Cricket</a></li>
+                          <li><a  href="taboga.html">D. Taboga</a></li>
                       </ul>
                   </li>
 
