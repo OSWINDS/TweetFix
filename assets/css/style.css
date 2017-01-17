@@ -2387,3 +2387,9 @@ img{
     border: 0px solid transparent;
     border-bottom: 1px solid #797979;
 }
+
+@media (min-width: 768px) {
+  .bubble-chart{
+    width: 500px;
+  }
+}
